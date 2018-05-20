@@ -1,0 +1,8 @@
+<h1>School Classes Form</h1>
+<%= form_tag school_classes_path do %>
+  <label>School Classes:</label><br>
+  <%= text_field_tag :'school_class[title]' %><br>
+  <label>School Class Room: </label><br>
+  <%= text_field_tag :'school_class[room_number]' %><br>
+  <%= submit_tag "Update School class" %>
+<% end %>
