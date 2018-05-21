@@ -13,6 +13,15 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :students, only: [:index, :create, :edit, :new]
+  get '/students/:id', to: 'students#show', as: 'student'
+  patch 'students/:id', to: 'students#update'
+
+
+
+  resources :school_classes, only: [:index, :create, :edit, :new]
+  get 'school_classes/:id', to: 'school_classes#show', as: 'school_class'
+  patch 'school_classes/:id', to: 'school_classes#update'
 
   # Example resource route with options:
   #   resources :products do
