@@ -1,6 +1,6 @@
 class CreateSchoolClassesTable < ActiveRecord::Migration
   def change
-    create_table :school_classes_tables do |t|
+    create_table :school_classes do |t|
       t.string :title
       t.integer :room_number
     end
