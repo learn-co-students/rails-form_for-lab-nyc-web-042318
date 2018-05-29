@@ -1,0 +1,7 @@
+<% if @school_classes.length < 1 %>
+<div> No school classes are registered. </div>
+<% else %>
+<% @school_classes.each do |schoolclass| %>
+  <div><%= schoolclass.title %> at room number #<%= schoolclass.room_number %></div>
+<% end %>
+<% end %>
